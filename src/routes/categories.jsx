@@ -5,7 +5,7 @@ const Categories = () => {
   useEffect(() => {
     console.log(key);
   }, []);
-  return <div>Categories</div>;
+  return <div>show all categories</div>;
 };
 
 export default Categories;
