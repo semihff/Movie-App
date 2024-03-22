@@ -4,6 +4,7 @@ import { getMovieDetailsById } from "../../db/movie";
 import Navbar from "../navbar/navbar";
 import "./movie-details.css";
 import { getActorByMovieId } from "../../db/actor";
+import Actors from "../actors/actor";
 
 const MovieDetails = () => {
   const { id } = useParams();
