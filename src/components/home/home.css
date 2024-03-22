@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Balinese:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;500;600;700&display=swap");
+main article {
+  width: 100%;
+  background-color: #e8317e;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  position: relative;
+}
+
+/* Input SIDE */
+main article img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+}
+main article form {
+  top: 0;
+  margin-top: 3rem;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-bottom: 3rem;
+}
+main article form input {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  outline: line;
+  font-size: 1rem;
+  font-family: "Noto Sans Balinese", sans-serif;
+  background-color: #09131b;
+  color: #fff;
+  border-radius: 3rem;
+  padding-left: 5rem;
+}
+main article form input:focus {
+  outline: none;
+}
+
+main article form .search-icon {
+  position: absolute;
+  color: #fff;
+  top: 0;
+  left: 0;
+  margin-left: 1rem;
+  margin-top: 0.4rem;
+  cursor: pointer;
+}
+main article form button {
+  position: absolute;
+  right: 0;
+  padding: 1.1rem 2rem;
+  font-size: 1.3rem;
+  border-radius: 3rem;
+  border: none;
+  color: #fff;
+  background-color: #e8317e;
+  cursor: pointer;
+}
+
+/* Movie Name Side */
+
+main article section {
+  left: 0;
+  margin-left: 5rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+main article section .movie-name {
+  color: #fff;
+  font-size: 5rem;
+  font-family: "Palanquin Dark", sans-serif;
+  font-weight: 400;
+}
+main article section .movie-desc {
+  color: #a8a6a6;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-family: "Noto Sans Balinese", sans-serif;
+}

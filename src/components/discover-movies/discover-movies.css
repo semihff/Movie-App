@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Balinese:wght@400..700&display=swap");
+.discover-movies {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 3rem;
+  padding-left: 2rem;
+}
+.discover-movies h1 {
+  font-size: 4rem;
+  padding-left: 2rem;
+  font-family: "Noto Sans Balinese", sans-serif;
+}
