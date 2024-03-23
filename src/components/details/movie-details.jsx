@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { getMovieDetailsById } from "../../db/movie";
 import Navbar from "../navbar/navbar";
 import "./movie-details.css";
 import { getActorByMovieId } from "../../db/actor";
 import Actors from "../actors/actor";
+import { FaStar } from "react-icons/fa";
 
 const MovieDetails = () => {
   const { id } = useParams();
@@ -12,13 +13,14 @@ const MovieDetails = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [err, setErr] = useState(null);
   const [selected, setSelected] = useState("details");
-
+  const vote = movie?.vote_average?.toFixed(1);
   useEffect(() => {
     setIsLoading(true);
     try {
       const getDetailsMovie = async () => {
         const data = await getMovieDetailsById(id);
         setMovie(data);
+        console.log(data);
       };
       getDetailsMovie();
     } catch (error) {
@@ -72,7 +74,50 @@ const MovieDetails = () => {
             </span>
           </div>
           <div className="details-section">
-            {selected === "details" ? <div>sa</div> : <Actors />}
+            {selected === "details" ? (
+              <div className="movie-info">
+                <span>{movie.overview}</span>
+                <span className="release-date">
+                  Çıkış Tarihi : <span>{movie.release_date}</span>
+                </span>
+                <span className="movie-genres">
+                  Tür :{" "}
+                  <div className="genres">
+                    {movie.genres?.map((genre) => (
+                      <Link
+                        style={{ color: "gray", textDecoration: "none" }}
+                        to={`/${genre.id}`}
+                      >
+                        <div className="genre" key={genre.id}>
+                          {genre.name}
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </span>
+                <span className="vote-avg">
+                  Puan : {""}
+                  <div>
+                    <FaStar color="yellow" size={40} /> <span>{vote}</span>
+                  </div>
+                </span>
+
+                <span className="more-info">
+                  Daha fazla bilgi için tıklayın
+                  <a
+                    target="_blank"
+                    href={`https://www.imdb.com/title/${movie.imdb_id}`}
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/2560px-IMDB_Logo_2016.svg.png"
+                      alt=""
+                    />
+                  </a>
+                </span>
+              </div>
+            ) : (
+              <Actors />
+            )}
           </div>
         </div>
       </div>
