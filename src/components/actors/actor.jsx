@@ -1,7 +1,7 @@
 import React from "react";
 
 const Actors = () => {
-  return <div>git added</div>;
+  return <div>gied</div>;
 };
 
 export default Actors;
