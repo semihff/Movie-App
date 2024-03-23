@@ -3,10 +3,9 @@ import { Link, useParams } from "react-router-dom";
 import { getMovieDetailsById } from "../../db/movie";
 import Navbar from "../navbar/navbar";
 import "./movie-details.css";
-import { getActorByMovieId } from "../../db/actor";
 import Actors from "../actors/actor";
 import { FaStar } from "react-icons/fa";
-
+import { ScrollRestoration } from "react-router-dom";
 const MovieDetails = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState([]);
@@ -29,6 +28,7 @@ const MovieDetails = () => {
   }, []);
   return (
     <div>
+      <ScrollRestoration />
       <Navbar />
       <div className="details-wrapper">
         <div className="background">
@@ -76,9 +76,19 @@ const MovieDetails = () => {
           <div className="details-section">
             {selected === "details" ? (
               <div className="movie-info">
-                <span>{movie.overview}</span>
+                <span>
+                  Açıklama :{" "}
+                  {movie.overview
+                    ? movie.overview
+                    : "Bu film hakkında bir açıklama bulunamadı."}
+                </span>
                 <span className="release-date">
-                  Çıkış Tarihi : <span>{movie.release_date}</span>
+                  Çıkış Tarihi :{" "}
+                  <span>
+                    {movie.release_date
+                      ? movie.release_date
+                      : "Bu filmin çıkış tarihi bulunamadı"}
+                  </span>
                 </span>
                 <span className="movie-genres">
                   Tür :{" "}
@@ -87,10 +97,9 @@ const MovieDetails = () => {
                       <Link
                         style={{ color: "gray", textDecoration: "none" }}
                         to={`/${genre.id}`}
+                        key={genre.id}
                       >
-                        <div className="genre" key={genre.id}>
-                          {genre.name}
-                        </div>
+                        <div className="genre">{genre.name}</div>
                       </Link>
                     ))}
                   </div>
@@ -116,7 +125,7 @@ const MovieDetails = () => {
                 </span>
               </div>
             ) : (
-              <Actors />
+              <Actors id={movie.id} />
             )}
           </div>
         </div>
