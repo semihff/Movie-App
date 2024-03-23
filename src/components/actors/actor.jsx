@@ -1,7 +1,7 @@
 import React from "react";
 
 const Actors = () => {
-  return <div>gieaaaaaaaaad</div>;
+  return <div>gieaaaaaaaaaaaaaaaad</div>;
 };
 
 export default Actors;
