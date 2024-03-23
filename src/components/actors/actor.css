@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Balinese:wght@400..700&display=swap");
+.actor-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  justify-content: space-between;
+}
+.actor-wrapper .actor {
+  cursor: pointer;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  border: 1px solid #fffcfd;
+  overflow: hidden;
+}
+.actor-wrapper .actor span {
+  font-family: "Noto Sans Balinese", sans-serif;
+}
+.actor-wrapper .actor .char-name {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+}
+.actor-wrapper .actor .org-name {
+  font-size: 0.9rem;
+  color: gray;
+}
+.actor-wrapper .actor .org-name:hover {
+  color: #e8317e;
+}
