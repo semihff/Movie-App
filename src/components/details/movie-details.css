@@ -90,3 +90,63 @@
 .unselected-color {
   color: gray;
 }
+
+.movie-info {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2rem;
+  gap: 2rem;
+  font-family: "Noto Sans Balinese", sans-serif;
+  color: rgb(128, 128, 128);
+}
+.movie-info .release-date span {
+  color: #ffffff;
+}
+.movie-info .movie-genres {
+  display: flex;
+  gap: 2rem;
+}
+.movie-info .movie-genres .genres {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.movie-info .movie-genres .genres .genre {
+  padding: 0 4rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  border: 1px solid #e8317e;
+}
+.movie-info .movie-genres .genres .genre:hover {
+  color: #e8317e;
+}
+.movie-info .vote-avg {
+  display: flex;
+  gap: 2rem;
+}
+.movie-info .vote-avg div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.movie-info .vote-avg span {
+  font-size: 2rem;
+  color: #fff;
+}
+.movie-info .more-info {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+.movie-info .more-info a {
+  display: flex;
+  align-items: center;
+}
+.movie-info .more-info a img {
+  width: 100px;
+}
