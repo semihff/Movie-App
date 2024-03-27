@@ -6,7 +6,7 @@ const BackArrow = ({ name }) => {
   const navigate = useNavigate();
   const returnHome = (e) => {
     e.preventDefault();
-    navigate("/");
+    navigate(-1);
   };
   return (
     <div className="search-bar">
