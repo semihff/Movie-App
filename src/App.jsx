@@ -3,18 +3,23 @@ import "./App.css";
 import Navbar from "./components/navbar/navbar";
 import Home from "./components/home/home";
 import DiscoverMovies from "./components/discover-movies/discover-movies";
+import AuthModal from "./components/modal/auth-modal";
+import { useModalProvider } from "./context/modal-context";
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  const { isOpen } = useModalProvider();
   return (
-    <div className="app-container">
-      <Navbar />
-      <main>
-        <Home />
-        <DiscoverMovies />
-      </main>
-    </div>
+    <>
+      {isOpen && <AuthModal />}
+
+      <div className="app-container">
+        <Navbar />
+        <main>
+          <Home />
+          <DiscoverMovies />
+        </main>
+      </div>
+    </>
   );
 }
 
