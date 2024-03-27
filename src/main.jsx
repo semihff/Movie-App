@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Categories from "./routes/categories.jsx";
 import Search from "./routes/search.jsx";
 import MovieDetails from "./components/details/movie-details.jsx";
+import { ModalContextProvider } from "./context/modal-context.jsx";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ModalContextProvider>
+      <RouterProvider router={router} />
+    </ModalContextProvider>
   </React.StrictMode>
 );

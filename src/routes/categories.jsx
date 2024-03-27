@@ -30,7 +30,6 @@ const Categories = () => {
         const data = await getMoviesByCategoriesId(id, page);
         setIsLoading(false);
         setCategories((prev) => [...prev, ...data.results]);
-        console.log(page, id);
       };
       getMoiveByDetailsId();
     } catch (error) {

@@ -4,7 +4,7 @@ import "./home.css";
 import { useNavigate } from "react-router-dom";
 const Home = () => {
   const navigate = useNavigate();
-  const [value, setValue] = useState();
+  const [value, setValue] = useState("");
   const formOnSubmit = (e) => {
     e.preventDefault();
     navigate(`/search?query=${value}`);
