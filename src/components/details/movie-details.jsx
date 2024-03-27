@@ -6,6 +6,7 @@ import "./movie-details.css";
 import Actors from "../actors/actor";
 import { FaStar } from "react-icons/fa";
 import { ScrollRestoration } from "react-router-dom";
+import BackArrow from "../back-button/back-arrow";
 const MovieDetails = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState([]);
@@ -32,11 +33,16 @@ const MovieDetails = () => {
       <Navbar />
       <div className="details-wrapper">
         <div className="background">
+          <div className="back-arrow">
+            <BackArrow name={"Detaylar"} />
+          </div>
+
           <img
             className="background-image"
             src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
             alt=""
           />
+
           <div className="poster">
             <div className="poster-img">
               <img

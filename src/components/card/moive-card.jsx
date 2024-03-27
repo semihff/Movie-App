@@ -7,7 +7,7 @@ const MovieCard = ({ movie }) => {
   return (
     <Link className="card" to={`/movie/${movie.id}`}>
       <img
-        src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+        src={`https://image.tmdb.org/t/p/w300/${movie?.poster_path}`}
         alt=""
       />
       <span className="vote">

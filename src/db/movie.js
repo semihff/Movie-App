@@ -1,6 +1,6 @@
-export const getMovies = async () => {
+export const getMovies = async (page = 1) => {
   const res = await fetch(
-    `https://api.themoviedb.org/3/discover/movie?include_adult=false&language=en-US&page=1&sort_by=popularity.desc&api_key=${
+    `https://api.themoviedb.org/3/discover/movie?include_adult=false&language=en-US&page=${page}&sort_by=popularity.desc&api_key=${
       import.meta.env.VITE_API_KEY
     }`
   );
