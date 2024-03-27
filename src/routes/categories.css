@@ -1,0 +1,18 @@
+.categories-container {
+  padding-left: 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.categories-container .card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding-left: 2rem;
+}
+.loading-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

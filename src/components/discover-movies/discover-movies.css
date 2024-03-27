@@ -12,3 +12,11 @@
   padding-left: 2rem;
   font-family: "Noto Sans Balinese", sans-serif;
 }
+.hata-mesaj {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 5rem;
+  padding: 2rem;
+  color: gray;
+}

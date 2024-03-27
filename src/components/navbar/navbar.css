@@ -44,6 +44,7 @@ nav .genres {
   justify-content: start;
   padding-left: 5rem;
   align-items: center;
+  user-select: none;
 }
 nav .genres li {
   list-style-type: none;
